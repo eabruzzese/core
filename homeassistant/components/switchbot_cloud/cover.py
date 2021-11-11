@@ -66,6 +66,15 @@ class SwitchBotCurtain(CoordinatorEntity, CoverEntity, RestoreEntity):
         self.device = device
 
     @property
+    def device_info(self):
+        return {
+            "identifiers": {(DOMAIN, self.unique_id)},
+            "name": self.name,
+            "manufacturer": "SwitchBot",
+            "model": "Curtain"
+        }
+
+    @property
     def unique_id(self) -> str | None:
         return self.device.id
 

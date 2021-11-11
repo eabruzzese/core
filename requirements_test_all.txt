@@ -1144,6 +1144,9 @@ python-smarttub==0.0.27
 # homeassistant.components.songpal
 python-songpal==0.12
 
+# homeassistant.components.switchbot_cloud
+python-switchbot==2.0.1
+
 # homeassistant.components.tado
 python-tado==0.12.0
 

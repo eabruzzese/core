@@ -1936,6 +1936,9 @@ python-sochain-api==0.0.2
 # homeassistant.components.songpal
 python-songpal==0.12
 
+# homeassistant.components.switchbot_cloud
+python-switchbot==2.0.1
+
 # homeassistant.components.tado
 python-tado==0.12.0
 

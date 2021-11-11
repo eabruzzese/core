@@ -283,6 +283,7 @@ FLOWS = [
     "subaru",
     "surepetcare",
     "switchbot",
+    "switchbot_cloud",
     "switcher_kis",
     "syncthing",
     "syncthru",

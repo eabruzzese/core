@@ -4,15 +4,14 @@ from __future__ import annotations
 import logging
 from typing import Any
 
+from switchbot_cloud import SwitchBot
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_API_TOKEN
+from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import HomeAssistantError
-
-from switchbot import SwitchBot # pylint: disable=import-error
 
 from .const import DOMAIN
 
@@ -39,7 +38,7 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
         await hass.async_add_executor_job(switchbot.devices)
     except RuntimeError:
         raise InvalidAuth
-    except IOError:
+    except OSError:
         raise CannotConnect
 
     return {"title": "SwitchBot Cloud"}
